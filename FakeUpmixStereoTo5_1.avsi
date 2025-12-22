@@ -1,4 +1,26 @@
-# Create fake 5.1 from stereo for testing Downmix6Stereo
+#============================================================
+#  FakeUpmixStereoTo5_1.avsi
+#------------------------------------------------------------
+#  Description:
+#    Creates a synthetic 6-channel (5.1) audio mix from a
+#    standard stereo source. Intended for testing purposes,
+#    e.g., to verify downmix or channel-mapping functions.
+#
+#  Compatibility:
+#    - AviSynth+ 3.4 and later (32-bit and 64-bit)
+#    - AviSynth 2.6 (classic builds)
+#    - AviSynth 2.5.8 (works, but may require float support)
+#
+#  Notes:
+#    • Requires only built-in AviSynth functions.
+#    • Input must have exactly 2 audio channels (stereo).
+#    • No external plugins needed.
+#
+#  Author:
+#    CluelessCoder73
+#
+#============================================================
+
 Function FakeUpmixStereoTo5_1(clip a)
 {
     a = a.ConvertAudioToFloat()          # safer for mixing
